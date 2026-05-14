@@ -1,0 +1,814 @@
+[
+  {
+    "id": "fbr_0x_1",
+    "building": "Fast Breeder Reactor",
+    "name": "0× Enrich (1× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 96
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 2
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 96
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "fbr_1x_1",
+    "building": "Fast Breeder Reactor",
+    "name": "1× Enrich (1× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 96
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 4
+      },
+      {
+        "resource": "blanket",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 96
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 4
+      },
+      {
+        "resource": "blanket_e",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "fbr_3x_1",
+    "building": "Fast Breeder Reactor",
+    "name": "3× Enrich (1× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 24
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 4
+      },
+      {
+        "resource": "blanket",
+        "qty": 12
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 24
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 4
+      },
+      {
+        "resource": "blanket_e",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "fbr_0x_4",
+    "building": "Fast Breeder Reactor",
+    "name": "0× Enrich (4× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 384
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 8
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 384
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "fbr_1x_4",
+    "building": "Fast Breeder Reactor",
+    "name": "1× Enrich (4× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 384
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 16
+      },
+      {
+        "resource": "blanket",
+        "qty": 16
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 384
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 16
+      },
+      {
+        "resource": "blanket_e",
+        "qty": 16
+      }
+    ]
+  },
+  {
+    "id": "fbr_3x_4",
+    "building": "Fast Breeder Reactor",
+    "name": "3× Enrich (4× speed)",
+    "category": "reactor",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 96
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 16
+      },
+      {
+        "resource": "blanket",
+        "qty": 48
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 96
+      },
+      {
+        "resource": "spent_cf",
+        "qty": 16
+      },
+      {
+        "resource": "blanket_e",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "reprocess_cf",
+    "building": "Nuclear Reprocessing Plant",
+    "name": "Spent Core Fuel → Core Fuel",
+    "category": "reprocess",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "spent_cf",
+        "qty": 16
+      },
+      {
+        "resource": "sulfuric",
+        "qty": 2
+      },
+      {
+        "resource": "molten_glass",
+        "qty": 2
+      },
+      {
+        "resource": "steel",
+        "qty": 1
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "core_fuel",
+        "qty": 12
+      },
+      {
+        "resource": "nuclear_waste",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "reprocess_sf",
+    "building": "Nuclear Reprocessing Plant",
+    "name": "Spent Fuel → Reprocessed U + Pu",
+    "category": "reprocess",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "spent_fuel",
+        "qty": 8
+      },
+      {
+        "resource": "sulfuric",
+        "qty": 6
+      },
+      {
+        "resource": "molten_glass",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "reproc_u",
+        "qty": 6
+      },
+      {
+        "resource": "plutonium",
+        "qty": 1
+      },
+      {
+        "resource": "nuclear_waste",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "reprocess_sf_bf",
+    "building": "Nuclear Reprocessing Plant",
+    "name": "Spent Fuel → Blanket Fuel",
+    "category": "reprocess",
+    "duration": 30,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "spent_fuel",
+        "qty": 1
+      },
+      {
+        "resource": "sulfuric",
+        "qty": 1
+      },
+      {
+        "resource": "molten_glass",
+        "qty": 1
+      },
+      {
+        "resource": "salt",
+        "qty": 1
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 1
+      },
+      {
+        "resource": "nuclear_waste",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "reprocess_mox",
+    "building": "Nuclear Reprocessing Plant",
+    "name": "Spent MOX → Blanket Fuel",
+    "category": "reprocess",
+    "duration": 30,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "spent_mox",
+        "qty": 1
+      },
+      {
+        "resource": "sulfuric",
+        "qty": 1
+      },
+      {
+        "resource": "molten_glass",
+        "qty": 1
+      },
+      {
+        "resource": "salt",
+        "qty": 1
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 1
+      },
+      {
+        "resource": "nuclear_waste",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "yc_settling",
+    "building": "Settling Tank",
+    "name": "Uranium Ore Powder → Yellowcake",
+    "category": "yellowcake",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "uranium_powder",
+        "qty": 36
+      },
+      {
+        "resource": "sulfuric",
+        "qty": 12
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "yellow_cake",
+        "qty": 6
+      },
+      {
+        "resource": "toxic_slurry",
+        "qty": 36
+      }
+    ]
+  },
+  {
+    "id": "enr_u4",
+    "building": "Enrichment Plant",
+    "name": "Yellowcake → U(4%)",
+    "category": "enrich",
+    "duration": 120,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "yellow_cake",
+        "qty": 6
+      },
+      {
+        "resource": "hf",
+        "qty": 2
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "u_4",
+        "qty": 1
+      },
+      {
+        "resource": "depleted_u",
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "enr_u20",
+    "building": "Enrichment Plant",
+    "name": "U(4%) → U(20%)",
+    "category": "enrich",
+    "duration": 120,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "u_4",
+        "qty": 5
+      },
+      {
+        "resource": "hf",
+        "qty": 2
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "u_20",
+        "qty": 1
+      },
+      {
+        "resource": "depleted_u",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "enr_u4_from_repu",
+    "building": "Enrichment Plant",
+    "name": "Reprocessed U → U(4%)",
+    "category": "enrich",
+    "duration": 120,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "reproc_u",
+        "qty": 4
+      },
+      {
+        "resource": "hf",
+        "qty": 2
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "u_4",
+        "qty": 1
+      },
+      {
+        "resource": "depleted_u",
+        "qty": 3
+      }
+    ]
+  },
+  {
+    "id": "enr_ebf_cf",
+    "building": "Enrichment Plant",
+    "name": "Enriched Blanket → Core Fuel",
+    "category": "enrich",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "blanket_e",
+        "qty": 8
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 6
+      },
+      {
+        "resource": "core_fuel",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "enr_ebf_pu",
+    "building": "Enrichment Plant",
+    "name": "Enriched Blanket → Plutonium",
+    "category": "enrich",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "blanket_e",
+        "qty": 16
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 12
+      },
+      {
+        "resource": "plutonium",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "enr_ebf_u20",
+    "building": "Enrichment Plant",
+    "name": "Enriched Blanket → U(20%)",
+    "category": "enrich",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "blanket_e",
+        "qty": 16
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 12
+      },
+      {
+        "resource": "u_20",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "chem_cf",
+    "building": "Chemical Plant II",
+    "name": "U(20%) → Core Fuel (startup)",
+    "category": "chem",
+    "duration": 60,
+    "exact": false,
+    "inputs": [
+      {
+        "resource": "u_20",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "core_fuel",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "chem_blanket_from_du",
+    "building": "Chemical Plant II",
+    "name": "Depleted U → Blanket Fuel",
+    "category": "chem",
+    "duration": 60,
+    "exact": false,
+    "inputs": [
+      {
+        "resource": "depleted_u",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "chem_blanket_from_yc",
+    "building": "Chemical Plant II",
+    "name": "Yellowcake → Blanket Fuel",
+    "category": "chem",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "yellow_cake",
+        "qty": 12
+      },
+      {
+        "resource": "salt",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "blanket",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "turb_sp",
+    "building": "Super-Pressure Turbine",
+    "name": "Steam (Super) → Steam (High) + Power",
+    "category": "power",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 48
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "shaft",
+        "qty": 108000
+      },
+      {
+        "resource": "steam_hp",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "turb_hp2",
+    "building": "High-Pressure Turbine II",
+    "name": "Steam (High) → Steam (Low) + Power",
+    "category": "power",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_hp",
+        "qty": 48
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "shaft",
+        "qty": 72000
+      },
+      {
+        "resource": "steam_lp",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "turb_lp2",
+    "building": "Low-Pressure Turbine II",
+    "name": "Steam (Low) → Steam (Depleted) + Power",
+    "category": "power",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_lp",
+        "qty": 48
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "shaft",
+        "qty": 36000
+      },
+      {
+        "resource": "steam_dp",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "gen_large",
+    "building": "Power Generator (Large)",
+    "name": "Mech. Power → Electricity",
+    "category": "power",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "shaft",
+        "qty": 18000
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "electricity",
+        "qty": 15000
+      }
+    ]
+  },
+  {
+    "id": "cool_sp",
+    "building": "Cooling Tower (Large)",
+    "name": "Steam (Super) → Water",
+    "category": "aux",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_sp",
+        "qty": 96
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "water",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "cool_hp",
+    "building": "Cooling Tower (Large)",
+    "name": "Steam (High) → Water",
+    "category": "aux",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_hp",
+        "qty": 96
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "water",
+        "qty": 60
+      }
+    ]
+  },
+  {
+    "id": "cool_lp",
+    "building": "Cooling Tower (Large)",
+    "name": "Steam (Low) → Water",
+    "category": "aux",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_lp",
+        "qty": 96
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "water",
+        "qty": 72
+      }
+    ]
+  },
+  {
+    "id": "cool_dp",
+    "building": "Cooling Tower (Large)",
+    "name": "Steam (Depleted) → Water",
+    "category": "aux",
+    "duration": 60,
+    "exact": true,
+    "inputs": [
+      {
+        "resource": "steam_dp",
+        "qty": 96
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "water",
+        "qty": 72
+      }
+    ]
+  },
+  {
+    "id": "desal",
+    "building": "Thermal Desalinator",
+    "name": "Seawater → Water (steam-heated)",
+    "category": "aux",
+    "duration": 60,
+    "exact": false,
+    "inputs": [
+      {
+        "resource": "seawater",
+        "qty": 60
+      },
+      {
+        "resource": "steam_sp",
+        "qty": 4
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "water",
+        "qty": 48
+      }
+    ]
+  },
+  {
+    "id": "electro",
+    "building": "Electrolyzer II",
+    "name": "Water → Hydrogen",
+    "category": "aux",
+    "duration": 60,
+    "exact": false,
+    "inputs": [
+      {
+        "resource": "water",
+        "qty": 12
+      },
+      {
+        "resource": "electricity",
+        "qty": 4800
+      }
+    ],
+    "outputs": [
+      {
+        "resource": "hydrogen",
+        "qty": 24
+      }
+    ]
+  }
+]

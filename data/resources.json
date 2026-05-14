@@ -1,0 +1,293 @@
+[
+  {
+    "id": "water",
+    "name": "Water",
+    "short": "H2O",
+    "color": "#3b82f6",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/9/9d/Water.png/48px-Water.png"
+    ]
+  },
+  {
+    "id": "steam_sp",
+    "name": "Steam (Super)",
+    "short": "S-SP",
+    "color": "#f97316",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/a/a0/SteamSp.png/48px-SteamSp.png"
+    ]
+  },
+  {
+    "id": "steam_hp",
+    "name": "Steam (High)",
+    "short": "S-HP",
+    "color": "#fb923c",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/5/5c/SteamHp.png"
+    ]
+  },
+  {
+    "id": "steam_lp",
+    "name": "Steam (Low)",
+    "short": "S-LP",
+    "color": "#fdba74",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/a/af/SteamLp.png"
+    ]
+  },
+  {
+    "id": "steam_dp",
+    "name": "Steam (Depleted)",
+    "short": "S-D",
+    "color": "#fed7aa",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/2/21/SteamDepleated.png"
+    ]
+  },
+  {
+    "id": "core_fuel",
+    "name": "Core Fuel",
+    "short": "CF",
+    "color": "#22c55e",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/1/19/CoreFuel.png/48px-CoreFuel.png"
+    ]
+  },
+  {
+    "id": "spent_cf",
+    "name": "Spent Core Fuel",
+    "short": "SCF",
+    "color": "#15803d",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/1/1a/CoreFuelDirty.png/48px-CoreFuelDirty.png"
+    ]
+  },
+  {
+    "id": "blanket",
+    "name": "Blanket Fuel",
+    "short": "BF",
+    "color": "#facc15",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/5/5d/BlanketFuel.png/48px-BlanketFuel.png"
+    ]
+  },
+  {
+    "id": "blanket_e",
+    "name": "Blanket Fuel (Enriched)",
+    "short": "EBF",
+    "color": "#f59e0b",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/9/9c/BlanketFuelEnriched.png/48px-BlanketFuelEnriched.png"
+    ]
+  },
+  {
+    "id": "yellow_cake",
+    "name": "Yellowcake",
+    "short": "YC",
+    "color": "#eab308",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/c/c0/YellowCake.png/48px-YellowCake.png"
+    ]
+  },
+  {
+    "id": "depleted_u",
+    "name": "Depleted Uranium",
+    "short": "DU",
+    "color": "#94a3b8",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/0/0f/DepletedUranium.png/48px-DepletedUranium.png"
+    ]
+  },
+  {
+    "id": "u_4",
+    "name": "Enriched U (4%)",
+    "short": "U4",
+    "color": "#60a5fa",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/c/c6/UraniumEnriched4Perc.png/48px-UraniumEnriched4Perc.png"
+    ]
+  },
+  {
+    "id": "u_20",
+    "name": "Enriched U (20%)",
+    "short": "U20",
+    "color": "#2563eb",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/thumb/7/77/UraniumEnriched20Perc.png/48px-UraniumEnriched20Perc.png"
+    ]
+  },
+  {
+    "id": "sulfuric",
+    "name": "Acid",
+    "short": "Acid",
+    "color": "#a855f7",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/1/18/Acid.png"
+    ]
+  },
+  {
+    "id": "nuclear_waste",
+    "name": "Fission Product",
+    "short": "FP",
+    "color": "#7c2d12",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/1/14/FissionProduct.png"
+    ]
+  },
+  {
+    "id": "seawater",
+    "name": "Seawater",
+    "short": "SeaW",
+    "color": "#0891b2",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/e/e2/Seawater.png",
+      "https://wiki.coigame.com/images/f/f9/SeaWater.png"
+    ]
+  },
+  {
+    "id": "hydrogen",
+    "name": "Hydrogen",
+    "short": "H2",
+    "color": "#ec4899",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/e/ed/Hydrogen.png"
+    ]
+  },
+  {
+    "id": "shaft",
+    "name": "Mechanical Power",
+    "short": "MW",
+    "color": "#a3a3a3",
+    "group": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/b/bb/Mechanical_Power.png"
+    ]
+  },
+  {
+    "id": "electricity",
+    "name": "Electricity",
+    "short": "kW",
+    "color": "#fde047",
+    "group": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/0/05/Electricity.png"
+    ]
+  },
+  {
+    "id": "uranium_powder",
+    "name": "Uranium Ore Powder",
+    "short": "UOP",
+    "color": "#84cc16",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/b/b0/UraniumOreCrushed.png"
+    ]
+  },
+  {
+    "id": "toxic_slurry",
+    "name": "Toxic Slurry",
+    "short": "TxSl",
+    "color": "#65a30d",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/3/33/ToxicSlurry.png"
+    ]
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "short": "Salt",
+    "color": "#e5e7eb",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/7/77/Salt.png"
+    ]
+  },
+  {
+    "id": "hf",
+    "name": "Hydrogen Fluoride",
+    "short": "HF",
+    "color": "#f43f5e",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/a/a1/HydrogenFluoride.png"
+    ]
+  },
+  {
+    "id": "plutonium",
+    "name": "Plutonium",
+    "short": "Pu",
+    "color": "#dc2626",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/5/55/Plutonium.png"
+    ]
+  },
+  {
+    "id": "reproc_u",
+    "name": "Reprocessed Uranium (1%)",
+    "short": "RepU",
+    "color": "#7dd3fc",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/d/df/ReprocessedUranium.png"
+    ]
+  },
+  {
+    "id": "molten_glass",
+    "name": "Molten Glass",
+    "short": "MGl",
+    "color": "#f59e0b",
+    "group": "fluid",
+    "icon": [
+      "https://wiki.coigame.com/images/1/12/GlassMolten.png"
+    ]
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "short": "Stl",
+    "color": "#64748b",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/c/c9/Steel.png"
+    ]
+  },
+  {
+    "id": "spent_fuel",
+    "name": "Spent Fuel",
+    "short": "SpF",
+    "color": "#52525b",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/e/e4/SpentFuel.png"
+    ]
+  },
+  {
+    "id": "spent_mox",
+    "name": "Spent MOX",
+    "short": "SpMx",
+    "color": "#404040",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/8/86/SpentMox.png"
+    ]
+  }
+]

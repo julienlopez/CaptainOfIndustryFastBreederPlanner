@@ -1,0 +1,37 @@
+[
+  {
+    "id": "reactor",
+    "name": "Fast Breeder Reactor",
+    "color": "#f97316"
+  },
+  {
+    "id": "reprocess",
+    "name": "Reprocessing",
+    "color": "#22c55e"
+  },
+  {
+    "id": "enrich",
+    "name": "Enrichment",
+    "color": "#2563eb"
+  },
+  {
+    "id": "chem",
+    "name": "Chemical Plant II",
+    "color": "#a855f7"
+  },
+  {
+    "id": "yellowcake",
+    "name": "Yellowcake Production",
+    "color": "#eab308"
+  },
+  {
+    "id": "power",
+    "name": "Power Generation",
+    "color": "#fde047"
+  },
+  {
+    "id": "aux",
+    "name": "Auxiliary",
+    "color": "#06b6d4"
+  }
+]

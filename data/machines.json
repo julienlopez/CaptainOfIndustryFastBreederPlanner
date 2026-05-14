@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Settling Tank",
+    "tier": 1,
+    "category": "yellowcake",
+    "icon": [
+      "https://wiki.coigame.com/images/6/6e/SettlingTank.png"
+    ]
+  },
+  {
+    "name": "Fast Breeder Reactor",
+    "tier": 3,
+    "category": "reactor",
+    "icon": [
+      "https://wiki.coigame.com/images/9/98/Fast_Breeder_Reactor.png"
+    ]
+  },
+  {
+    "name": "Nuclear Reprocessing Plant",
+    "tier": 3,
+    "category": "reprocess",
+    "icon": [
+      "https://wiki.coigame.com/images/e/ed/Nuclear_Reprocessing_Plant.png"
+    ]
+  },
+  {
+    "name": "Enrichment Plant",
+    "tier": 2,
+    "category": "enrich",
+    "icon": [
+      "https://wiki.coigame.com/images/1/1f/Enrichment_Plant.png"
+    ]
+  },
+  {
+    "name": "Chemical Plant II",
+    "tier": 2,
+    "category": "chem",
+    "icon": [
+      "https://wiki.coigame.com/images/a/aa/Chemical_Plant_II.png"
+    ]
+  },
+  {
+    "name": "Super-Pressure Turbine",
+    "tier": 1,
+    "category": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/e/ea/Super-pressure_Turbine.png"
+    ]
+  },
+  {
+    "name": "High-Pressure Turbine II",
+    "tier": 2,
+    "category": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/6/67/High-Pressure_Turbine_II.png"
+    ]
+  },
+  {
+    "name": "Low-Pressure Turbine II",
+    "tier": 2,
+    "category": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/9/97/Low-Pressure_Turbine_II.png"
+    ]
+  },
+  {
+    "name": "Power Generator (Large)",
+    "tier": 2,
+    "category": "power",
+    "icon": [
+      "https://wiki.coigame.com/images/f/f6/Power_Generator_(Large).png"
+    ]
+  },
+  {
+    "name": "Cooling Tower (Large)",
+    "tier": 2,
+    "category": "aux",
+    "icon": [
+      "https://wiki.coigame.com/images/3/39/Cooling_Tower_(Large).png"
+    ]
+  },
+  {
+    "name": "Thermal Desalinator",
+    "tier": 1,
+    "category": "aux",
+    "icon": [
+      "https://wiki.coigame.com/images/4/4b/Thermal_Desalinator.png"
+    ]
+  },
+  {
+    "name": "Electrolyzer II",
+    "tier": 2,
+    "category": "aux",
+    "icon": [
+      "https://wiki.coigame.com/images/7/7c/Electrolyzer_II.png"
+    ]
+  }
+]
