@@ -5,7 +5,6 @@
     "name": "0× Enrich (1× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -33,7 +32,6 @@
     "name": "1× Enrich (1× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -69,7 +67,6 @@
     "name": "3× Enrich (1× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -105,7 +102,6 @@
     "name": "0× Enrich (4× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -133,7 +129,6 @@
     "name": "1× Enrich (4× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -169,7 +164,6 @@
     "name": "3× Enrich (4× speed)",
     "category": "reactor",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "water",
@@ -205,7 +199,6 @@
     "name": "Spent Core Fuel → Core Fuel",
     "category": "reprocess",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "spent_cf",
@@ -241,7 +234,6 @@
     "name": "Spent Fuel → Reprocessed U + Pu",
     "category": "reprocess",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "spent_fuel",
@@ -277,7 +269,6 @@
     "name": "Spent Fuel → Blanket Fuel",
     "category": "reprocess",
     "duration": 30,
-    "exact": true,
     "inputs": [
       {
         "resource": "spent_fuel",
@@ -313,7 +304,6 @@
     "name": "Spent MOX → Blanket Fuel",
     "category": "reprocess",
     "duration": 30,
-    "exact": true,
     "inputs": [
       {
         "resource": "spent_mox",
@@ -349,7 +339,6 @@
     "name": "Uranium Ore Powder → Yellowcake",
     "category": "yellowcake",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "uranium_powder",
@@ -377,7 +366,6 @@
     "name": "Yellowcake → U(4%)",
     "category": "enrich",
     "duration": 120,
-    "exact": true,
     "inputs": [
       {
         "resource": "yellow_cake",
@@ -405,7 +393,6 @@
     "name": "U(4%) → U(20%)",
     "category": "enrich",
     "duration": 120,
-    "exact": true,
     "inputs": [
       {
         "resource": "u_4",
@@ -433,7 +420,6 @@
     "name": "Reprocessed U → U(4%)",
     "category": "enrich",
     "duration": 120,
-    "exact": true,
     "inputs": [
       {
         "resource": "reproc_u",
@@ -461,7 +447,6 @@
     "name": "Enriched Blanket → Core Fuel",
     "category": "enrich",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "blanket_e",
@@ -485,7 +470,6 @@
     "name": "Enriched Blanket → Plutonium",
     "category": "enrich",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "blanket_e",
@@ -509,7 +493,6 @@
     "name": "Enriched Blanket → U(20%)",
     "category": "enrich",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "blanket_e",
@@ -533,7 +516,6 @@
     "name": "U(20%) → Core Fuel (startup)",
     "category": "chem",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "u_20",
@@ -557,7 +539,6 @@
     "name": "Depleted U → Blanket Fuel",
     "category": "chem",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "depleted_u",
@@ -585,7 +566,6 @@
     "name": "Yellowcake → Blanket Fuel",
     "category": "chem",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "yellow_cake",
@@ -609,7 +589,6 @@
     "name": "Steam (Super) → Steam (High) + Power",
     "category": "power",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_sp",
@@ -633,7 +612,6 @@
     "name": "Steam (High) → Steam (Low) + Power",
     "category": "power",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_hp",
@@ -657,7 +635,6 @@
     "name": "Steam (Low) → Steam (Depleted) + Power",
     "category": "power",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_lp",
@@ -681,7 +658,6 @@
     "name": "Mech. Power → Electricity",
     "category": "power",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "shaft",
@@ -701,7 +677,6 @@
     "name": "Steam (Super) → Water",
     "category": "aux",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_sp",
@@ -721,7 +696,6 @@
     "name": "Steam (High) → Water",
     "category": "aux",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_hp",
@@ -741,7 +715,6 @@
     "name": "Steam (Low) → Water",
     "category": "aux",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_lp",
@@ -761,7 +734,6 @@
     "name": "Steam (Depleted) → Water",
     "category": "aux",
     "duration": 60,
-    "exact": true,
     "inputs": [
       {
         "resource": "steam_dp",

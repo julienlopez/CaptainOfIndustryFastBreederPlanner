@@ -42,12 +42,7 @@ fn FacilityCard(facility: Facility, facilities: Signal<Vec<Facility>>) -> Elemen
                 MachineIcon { building: recipe.building.clone(), size: 32 }
                 div { class: "fac-header-text",
                     div { class: "fac-building", "{recipe.building}" }
-                    div { class: "fac-name",
-                        "{recipe.name}"
-                        if !recipe.exact {
-                            span { class: "rc-approx", style: "margin-left:6px;", "~APX" }
-                        }
-                    }
+                    div { class: "fac-name", "{recipe.name}" }
                 }
                 button {
                     class: "fac-close",

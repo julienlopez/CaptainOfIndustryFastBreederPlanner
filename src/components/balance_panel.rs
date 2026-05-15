@@ -86,9 +86,6 @@ pub fn BalancePanel(
             }
 
             div { class: "note-bar",
-                span { class: "warn", "~APX" }
-                " = approximate; verify in-game. "
-                "Reactor recipes (orange) are exact from the wiki. "
                 "All rates shown "
                 strong { "per minute" }
                 "."

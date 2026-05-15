@@ -32,7 +32,6 @@ pub struct Recipe {
     pub name: String,
     pub category: String,
     pub duration: u32,
-    pub exact: bool,
     pub inputs: Vec<RecipeIO>,
     pub outputs: Vec<RecipeIO>,
 }

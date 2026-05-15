@@ -97,16 +97,7 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
                 MachineIcon { building: recipe.building.clone(), size: 28 }
                 div { class: "rc-top-text",
                     div { class: "rc-building", "{recipe.building}" }
-                    div { class: "rc-name",
-                        "{recipe.name}"
-                        if !recipe.exact {
-                            span {
-                                class: "rc-approx",
-                                title: "Approximate values — verify in-game",
-                                "~APX"
-                            }
-                        }
-                    }
+                    div { class: "rc-name", "{recipe.name}" }
                 }
             }
             div { class: "rc-flow",
