@@ -1,5 +1,4 @@
 use serde::{Deserialize, Serialize};
-use std::time::{SystemTime, UNIX_EPOCH};
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, Default)]
 pub enum View {
@@ -34,14 +33,11 @@ pub struct PersistState {
 }
 
 pub fn new_uid() -> String {
-    let nanos = SystemTime::now()
-        .duration_since(UNIX_EPOCH)
-        .unwrap_or_default()
-        .subsec_nanos();
-    // Mix in a pseudo-random component to avoid collisions on fast calls
-    static COUNTER: std::sync::atomic::AtomicU32 = std::sync::atomic::AtomicU32::new(0);
+    // AtomicU64 counter: works on all targets including wasm32 (SystemTime
+    // is not available on wasm and would panic at runtime).
+    static COUNTER: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
     let seq = COUNTER.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-    format!("f{}_{}", nanos, seq)
+    format!("f{}", seq)
 }
 
 pub fn example_facilities() -> Vec<Facility> {
