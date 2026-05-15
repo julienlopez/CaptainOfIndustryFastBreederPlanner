@@ -1,9 +1,9 @@
-use dioxus::prelude::*;
-use std::sync::Arc;
+use super::icons::{Chip, MachineIcon};
+use crate::balance::fmt_qty;
 use crate::data::GameData;
 use crate::state::Facility;
-use crate::balance::fmt_qty;
-use super::icons::{Chip, MachineIcon};
+use dioxus::prelude::*;
+use std::sync::Arc;
 
 #[component]
 pub fn TableView(facilities: Signal<Vec<Facility>>) -> Element {

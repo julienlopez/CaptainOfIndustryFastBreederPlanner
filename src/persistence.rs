@@ -1,5 +1,5 @@
-use std::path::PathBuf;
 use crate::state::PersistState;
+use std::path::PathBuf;
 
 fn state_path() -> Option<PathBuf> {
     dirs::config_dir().map(|d| d.join("coi_fbr_planner").join("state.json"))

@@ -1,6 +1,6 @@
-use std::collections::HashMap;
 use crate::data::Recipe;
 use crate::state::Facility;
+use std::collections::HashMap;
 
 #[derive(Debug, Default, Clone)]
 pub struct NetBalance {
@@ -31,7 +31,10 @@ pub fn compute_balance(
             totals.entry(input.resource.clone()).or_default().in_per_min += input.qty * mul;
         }
         for output in &recipe.outputs {
-            totals.entry(output.resource.clone()).or_default().out_per_min += output.qty * mul;
+            totals
+                .entry(output.resource.clone())
+                .or_default()
+                .out_per_min += output.qty * mul;
         }
     }
     totals

@@ -1,16 +1,16 @@
-mod data;
-mod state;
 mod balance;
-mod persistence;
 mod components;
+mod data;
+mod persistence;
+mod state;
 
-use dioxus::prelude::*;
-use data::GameData;
-use state::{example_facilities, Facility, BalanceMode, PersistState, View};
-use components::top_bar::{ConfirmAction, ConfirmDialog, TopBar};
-use components::recipe_palette::RecipePalette;
-use components::canvas::Canvas;
 use components::balance_panel::BalancePanel;
+use components::canvas::Canvas;
+use components::recipe_palette::RecipePalette;
+use components::top_bar::{ConfirmAction, ConfirmDialog, TopBar};
+use data::GameData;
+use dioxus::prelude::*;
+use state::{example_facilities, BalanceMode, Facility, PersistState, View};
 use std::sync::Arc;
 
 const CSS: &str = include_str!("../assets/main.css");

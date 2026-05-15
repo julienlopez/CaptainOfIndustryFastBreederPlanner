@@ -1,6 +1,6 @@
+use crate::data::GameData;
 use dioxus::prelude::*;
 use std::sync::Arc;
-use crate::data::GameData;
 
 // Resource icon: walks the candidate URL list, falls back to a colored swatch
 #[component]

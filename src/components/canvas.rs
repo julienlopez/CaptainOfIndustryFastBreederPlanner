@@ -1,9 +1,9 @@
-use dioxus::prelude::*;
-use crate::state::{Facility, View, new_uid};
-use crate::data::GameData;
-use std::sync::Arc;
-use super::table_view::TableView;
 use super::graph_view::GraphView;
+use super::table_view::TableView;
+use crate::data::GameData;
+use crate::state::{new_uid, Facility, View};
+use dioxus::prelude::*;
+use std::sync::Arc;
 
 #[component]
 pub fn Canvas(

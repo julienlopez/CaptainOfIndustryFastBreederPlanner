@@ -1,8 +1,8 @@
-use dioxus::prelude::*;
-use std::sync::Arc;
+use super::icons::{Chip, MachineIcon};
 use crate::data::GameData;
 use crate::state::Facility;
-use super::icons::{Chip, MachineIcon};
+use dioxus::prelude::*;
+use std::sync::Arc;
 
 #[component]
 pub fn RecipePalette(
@@ -75,7 +75,11 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
         .unwrap_or_else(|| "#f59e0b".to_string());
 
     let is_dragging = dragging_recipe.read().as_deref() == Some(&recipe_id);
-    let card_class = if is_dragging { "recipe-card dragging" } else { "recipe-card" };
+    let card_class = if is_dragging {
+        "recipe-card dragging"
+    } else {
+        "recipe-card"
+    };
 
     let rid = recipe_id.clone();
     let rid2 = recipe_id.clone();

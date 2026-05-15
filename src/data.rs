@@ -57,33 +57,36 @@ pub struct GameData {
 
 impl GameData {
     pub fn load() -> Self {
-        let resources: Vec<Resource> =
-            serde_json::from_str(include_str!("../data/resources.json"))
-                .expect("parse resources.json");
+        let resources: Vec<Resource> = serde_json::from_str(include_str!("../data/resources.json"))
+            .expect("parse resources.json");
 
-        let machines: Vec<Machine> =
-            serde_json::from_str(include_str!("../data/machines.json"))
-                .expect("parse machines.json");
+        let machines: Vec<Machine> = serde_json::from_str(include_str!("../data/machines.json"))
+            .expect("parse machines.json");
 
         let recipes: Vec<Recipe> =
-            serde_json::from_str(include_str!("../data/recipes.json"))
-                .expect("parse recipes.json");
+            serde_json::from_str(include_str!("../data/recipes.json")).expect("parse recipes.json");
 
         let categories: Vec<Category> =
             serde_json::from_str(include_str!("../data/categories.json"))
                 .expect("parse categories.json");
 
-        let resources_by_id: HashMap<String, Resource> =
-            resources.iter().map(|r| (r.id.clone(), r.clone())).collect();
+        let resources_by_id: HashMap<String, Resource> = resources
+            .iter()
+            .map(|r| (r.id.clone(), r.clone()))
+            .collect();
 
-        let machines_by_name: HashMap<String, Machine> =
-            machines.iter().map(|m| (m.name.clone(), m.clone())).collect();
+        let machines_by_name: HashMap<String, Machine> = machines
+            .iter()
+            .map(|m| (m.name.clone(), m.clone()))
+            .collect();
 
         let recipes_by_id: HashMap<String, Recipe> =
             recipes.iter().map(|r| (r.id.clone(), r.clone())).collect();
 
-        let categories_by_id: HashMap<String, Category> =
-            categories.iter().map(|c| (c.id.clone(), c.clone())).collect();
+        let categories_by_id: HashMap<String, Category> = categories
+            .iter()
+            .map(|c| (c.id.clone(), c.clone()))
+            .collect();
 
         let mut recipes_by_category: HashMap<String, Vec<Recipe>> = HashMap::new();
         for cat in &categories {

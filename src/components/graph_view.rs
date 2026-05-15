@@ -1,10 +1,10 @@
-use dioxus::prelude::*;
-use std::sync::Arc;
-use crate::data::GameData;
-use crate::state::Facility;
-use crate::balance::fmt_qty;
 use super::icons::{MachineIcon, ResIcon};
 use super::table_view::CountStepper;
+use crate::balance::fmt_qty;
+use crate::data::GameData;
+use crate::state::Facility;
+use dioxus::prelude::*;
+use std::sync::Arc;
 
 const NODE_W: f32 = 240.0;
 const NODE_H_HEADER: f32 = 44.0;
@@ -55,42 +55,60 @@ pub fn GraphView(facilities: Signal<Vec<Facility>>) -> Element {
     let facs = facilities.read().clone();
 
     // Compute positions (use stored or auto-layout)
-    let positions: Vec<(String, f32, f32)> = facs.iter().enumerate().map(|(i, f)| {
-        if let (Some(x), Some(y)) = (f.x, f.y) {
-            (f.uid.clone(), x, y)
-        } else {
-            let (x, y) = auto_pos(i);
-            (f.uid.clone(), x, y)
-        }
-    }).collect();
+    let positions: Vec<(String, f32, f32)> = facs
+        .iter()
+        .enumerate()
+        .map(|(i, f)| {
+            if let (Some(x), Some(y)) = (f.x, f.y) {
+                (f.uid.clone(), x, y)
+            } else {
+                let (x, y) = auto_pos(i);
+                (f.uid.clone(), x, y)
+            }
+        })
+        .collect();
 
     // Override with live drag position
-    let positions: Vec<(String, f32, f32)> = positions.into_iter().map(|(uid, x, y)| {
-        if let Some(drag) = node_drag.read().as_ref() {
-            if drag.uid == uid {
-                return (uid, drag.live_x, drag.live_y);
+    let positions: Vec<(String, f32, f32)> = positions
+        .into_iter()
+        .map(|(uid, x, y)| {
+            if let Some(drag) = node_drag.read().as_ref() {
+                if drag.uid == uid {
+                    return (uid, drag.live_x, drag.live_y);
+                }
             }
-        }
-        (uid, x, y)
-    }).collect();
+            (uid, x, y)
+        })
+        .collect();
 
     // Compute node heights
-    let heights: Vec<(String, f32)> = facs.iter().map(|f| {
-        let rows = game_data.recipes_by_id.get(&f.recipe_id)
-            .map(|r| r.inputs.len().max(r.outputs.len()))
-            .unwrap_or(1);
-        (f.uid.clone(), node_height(rows))
-    }).collect();
+    let heights: Vec<(String, f32)> = facs
+        .iter()
+        .map(|f| {
+            let rows = game_data
+                .recipes_by_id
+                .get(&f.recipe_id)
+                .map(|r| r.inputs.len().max(r.outputs.len()))
+                .unwrap_or(1);
+            (f.uid.clone(), node_height(rows))
+        })
+        .collect();
 
     // Compute edges
     let mut edges: Vec<Edge> = Vec::new();
     for prod in &facs {
-        let Some(pr) = game_data.recipes_by_id.get(&prod.recipe_id) else { continue };
+        let Some(pr) = game_data.recipes_by_id.get(&prod.recipe_id) else {
+            continue;
+        };
         let prod_mul = (60.0 / pr.duration as f64) * prod.count as f64;
         for output in &pr.outputs {
             for cons in &facs {
-                if cons.uid == prod.uid { continue }
-                let Some(cr) = game_data.recipes_by_id.get(&cons.recipe_id) else { continue };
+                if cons.uid == prod.uid {
+                    continue;
+                }
+                let Some(cr) = game_data.recipes_by_id.get(&cons.recipe_id) else {
+                    continue;
+                };
                 if cr.inputs.iter().any(|i| i.resource == output.resource) {
                     edges.push(Edge {
                         from: prod.uid.clone(),
@@ -104,9 +122,14 @@ pub fn GraphView(facilities: Signal<Vec<Facility>>) -> Element {
     }
 
     // Compute canvas extents
-    let max_x = positions.iter().map(|(_, x, _)| x + NODE_W + 100.0)
+    let max_x = positions
+        .iter()
+        .map(|(_, x, _)| x + NODE_W + 100.0)
         .fold(800.0f32, f32::max);
-    let max_y = positions.iter().zip(heights.iter()).map(|((_, _, y), (_, h))| y + h + 100.0)
+    let max_y = positions
+        .iter()
+        .zip(heights.iter())
+        .map(|((_, _, y), (_, h))| y + h + 100.0)
         .fold(600.0f32, f32::max);
     let canvas_w = max_x as u32;
     let canvas_h = max_y as u32;
@@ -120,29 +143,46 @@ pub fn GraphView(facilities: Signal<Vec<Facility>>) -> Element {
         rate: f64,
     }
 
-    let edge_paths: Vec<EdgePath> = edges.iter().filter_map(|e| {
-        let (_, x1_base, y1_base) = positions.iter().find(|(uid, _, _)| uid == &e.from)?;
-        let (_, x2_base, y2_base) = positions.iter().find(|(uid, _, _)| uid == &e.to)?;
-        let h1 = heights.iter().find(|(uid, _)| uid == &e.from).map(|(_, h)| *h).unwrap_or(200.0);
-        let h2 = heights.iter().find(|(uid, _)| uid == &e.to).map(|(_, h)| *h).unwrap_or(200.0);
+    let edge_paths: Vec<EdgePath> = edges
+        .iter()
+        .filter_map(|e| {
+            let (_, x1_base, y1_base) = positions.iter().find(|(uid, _, _)| uid == &e.from)?;
+            let (_, x2_base, y2_base) = positions.iter().find(|(uid, _, _)| uid == &e.to)?;
+            let h1 = heights
+                .iter()
+                .find(|(uid, _)| uid == &e.from)
+                .map(|(_, h)| *h)
+                .unwrap_or(200.0);
+            let h2 = heights
+                .iter()
+                .find(|(uid, _)| uid == &e.to)
+                .map(|(_, h)| *h)
+                .unwrap_or(200.0);
 
-        let x1 = x1_base + NODE_W;
-        let y1 = y1_base + h1 / 2.0;
-        let x2 = *x2_base;
-        let y2 = y2_base + h2 / 2.0;
-        let dx = ((x2 - x1).abs() * 0.5).max(60.0);
-        let c1x = x1 + dx;
-        let c2x = x2 - dx;
+            let x1 = x1_base + NODE_W;
+            let y1 = y1_base + h1 / 2.0;
+            let x2 = *x2_base;
+            let y2 = y2_base + h2 / 2.0;
+            let dx = ((x2 - x1).abs() * 0.5).max(60.0);
+            let c1x = x1 + dx;
+            let c2x = x2 - dx;
 
-        let path = format!(
-            "M {:.1} {:.1} C {:.1} {:.1}, {:.1} {:.1}, {:.1} {:.1}",
-            x1, y1, c1x, y1, c2x, y2, x2, y2
-        );
-        let mid_x = (x1 + x2) / 2.0;
-        let mid_y = 0.125 * y1 + 0.375 * y1 + 0.375 * y2 + 0.125 * y2;
+            let path = format!(
+                "M {:.1} {:.1} C {:.1} {:.1}, {:.1} {:.1}, {:.1} {:.1}",
+                x1, y1, c1x, y1, c2x, y2, x2, y2
+            );
+            let mid_x = (x1 + x2) / 2.0;
+            let mid_y = 0.125 * y1 + 0.375 * y1 + 0.375 * y2 + 0.125 * y2;
 
-        Some(EdgePath { path, mid_x, mid_y, resource_id: e.resource_id.clone(), rate: e.rate })
-    }).collect();
+            Some(EdgePath {
+                path,
+                mid_x,
+                mid_y,
+                resource_id: e.resource_id.clone(),
+                rate: e.rate,
+            })
+        })
+        .collect();
 
     // Pointer move handler (for dragging)
     let handle_ptr_move = move |e: Event<PointerData>| {

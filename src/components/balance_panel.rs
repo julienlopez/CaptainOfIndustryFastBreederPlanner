@@ -1,9 +1,9 @@
+use super::icons::ResIcon;
+use crate::balance::{compute_balance, fmt_qty};
+use crate::data::GameData;
+use crate::state::{BalanceMode, Facility};
 use dioxus::prelude::*;
 use std::sync::Arc;
-use crate::data::GameData;
-use crate::state::{Facility, BalanceMode};
-use crate::balance::{compute_balance, fmt_qty};
-use super::icons::ResIcon;
 
 #[component]
 pub fn BalancePanel(
@@ -28,7 +28,9 @@ pub fn BalancePanel(
     active.sort_by(|(_, in_a, out_a), (_, in_b, out_b)| {
         let net_a = (out_a - in_a).abs();
         let net_b = (out_b - in_b).abs();
-        net_b.partial_cmp(&net_a).unwrap_or(std::cmp::Ordering::Equal)
+        net_b
+            .partial_cmp(&net_a)
+            .unwrap_or(std::cmp::Ordering::Equal)
     });
 
     // Filter for external mode
@@ -77,12 +79,8 @@ pub fn BalancePanel(
                 }
             } else {
                 div { class: "balance-list",
-                    for (resource_id, in_amt, out_amt) in shown {
-                        BalanceRow {
-                            resource_id: resource_id,
-                            in_amt: in_amt,
-                            out_amt: out_amt,
-                        }
+                    for (resource_id , in_amt , out_amt) in shown {
+                        BalanceRow { resource_id, in_amt, out_amt }
                     }
                 }
             }

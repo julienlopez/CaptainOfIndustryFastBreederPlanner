@@ -1,5 +1,5 @@
+use crate::state::{example_facilities, BalanceMode, Facility, View};
 use dioxus::prelude::*;
-use crate::state::{example_facilities, Facility, BalanceMode, View};
 
 #[derive(Clone, PartialEq)]
 pub enum ConfirmAction {
@@ -52,10 +52,17 @@ pub fn TopBar(
 }
 
 #[component]
-pub fn ConfirmDialog(action: ConfirmAction, confirm_action: Signal<Option<ConfirmAction>>, facilities: Signal<Vec<Facility>>) -> Element {
+pub fn ConfirmDialog(
+    action: ConfirmAction,
+    confirm_action: Signal<Option<ConfirmAction>>,
+    facilities: Signal<Vec<Facility>>,
+) -> Element {
     let (title, msg) = match action {
         ConfirmAction::ClearAll => ("Clear All", "Remove all facilities from the canvas?"),
-        ConfirmAction::LoadExample => ("Load Example Loop", "Replace the current layout with the example loop?"),
+        ConfirmAction::LoadExample => (
+            "Load Example Loop",
+            "Replace the current layout with the example loop?",
+        ),
     };
     let action_clone = action.clone();
     rsx! {

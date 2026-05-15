@@ -42,11 +42,47 @@ pub fn new_uid() -> String {
 
 pub fn example_facilities() -> Vec<Facility> {
     vec![
-        Facility { uid: "ex1".into(), recipe_id: "fbr_1x_1".into(), count: 4, x: None, y: None },
-        Facility { uid: "ex2".into(), recipe_id: "reprocess_cf".into(), count: 1, x: None, y: None },
-        Facility { uid: "ex3".into(), recipe_id: "enr_ebf_cf".into(), count: 1, x: None, y: None },
-        Facility { uid: "ex4".into(), recipe_id: "chem_blanket_from_yc".into(), count: 1, x: None, y: None },
-        Facility { uid: "ex5".into(), recipe_id: "turb_sp".into(), count: 16, x: None, y: None },
-        Facility { uid: "ex6".into(), recipe_id: "cool_sp".into(), count: 2, x: None, y: None },
+        Facility {
+            uid: "ex1".into(),
+            recipe_id: "fbr_1x_1".into(),
+            count: 4,
+            x: None,
+            y: None,
+        },
+        Facility {
+            uid: "ex2".into(),
+            recipe_id: "reprocess_cf".into(),
+            count: 1,
+            x: None,
+            y: None,
+        },
+        Facility {
+            uid: "ex3".into(),
+            recipe_id: "enr_ebf_cf".into(),
+            count: 1,
+            x: None,
+            y: None,
+        },
+        Facility {
+            uid: "ex4".into(),
+            recipe_id: "chem_blanket_from_yc".into(),
+            count: 1,
+            x: None,
+            y: None,
+        },
+        Facility {
+            uid: "ex5".into(),
+            recipe_id: "turb_sp".into(),
+            count: 16,
+            x: None,
+            y: None,
+        },
+        Facility {
+            uid: "ex6".into(),
+            recipe_id: "cool_sp".into(),
+            count: 2,
+            x: None,
+            y: None,
+        },
     ]
 }
