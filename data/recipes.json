@@ -533,17 +533,21 @@
     "name": "U(20%) → Core Fuel (startup)",
     "category": "chem",
     "duration": 60,
-    "exact": false,
+    "exact": true,
     "inputs": [
       {
         "resource": "u_20",
+        "qty": 2
+      },
+      {
+        "resource": "salt",
         "qty": 4
       }
     ],
     "outputs": [
       {
         "resource": "core_fuel",
-        "qty": 2
+        "qty": 4
       }
     ]
   },
@@ -553,11 +557,19 @@
     "name": "Depleted U → Blanket Fuel",
     "category": "chem",
     "duration": 60,
-    "exact": false,
+    "exact": true,
     "inputs": [
       {
         "resource": "depleted_u",
+        "qty": 10
+      },
+      {
+        "resource": "salt",
         "qty": 4
+      },
+      {
+        "resource": "blanket_e",
+        "qty": 2
       }
     ],
     "outputs": [
@@ -760,54 +772,6 @@
       {
         "resource": "water",
         "qty": 72
-      }
-    ]
-  },
-  {
-    "id": "desal",
-    "building": "Thermal Desalinator",
-    "name": "Seawater → Water (steam-heated)",
-    "category": "aux",
-    "duration": 60,
-    "exact": false,
-    "inputs": [
-      {
-        "resource": "seawater",
-        "qty": 60
-      },
-      {
-        "resource": "steam_sp",
-        "qty": 4
-      }
-    ],
-    "outputs": [
-      {
-        "resource": "water",
-        "qty": 48
-      }
-    ]
-  },
-  {
-    "id": "electro",
-    "building": "Electrolyzer II",
-    "name": "Water → Hydrogen",
-    "category": "aux",
-    "duration": 60,
-    "exact": false,
-    "inputs": [
-      {
-        "resource": "water",
-        "qty": 12
-      },
-      {
-        "resource": "electricity",
-        "qty": 4800
-      }
-    ],
-    "outputs": [
-      {
-        "resource": "hydrogen",
-        "qty": 24
       }
     ]
   }
