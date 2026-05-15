@@ -18,8 +18,8 @@ pub fn RecipePalette(
             for cat in categories {
                 CategoryGroup {
                     category_id: cat.id.clone(),
-                    facilities: facilities,
-                    dragging_recipe: dragging_recipe,
+                    facilities,
+                    dragging_recipe,
                 }
             }
         }
@@ -53,10 +53,7 @@ fn CategoryGroup(
                 "{cat.name}"
             }
             for recipe in recipes {
-                RecipeCard {
-                    recipe_id: recipe.id.clone(),
-                    dragging_recipe: dragging_recipe,
-                }
+                RecipeCard { recipe_id: recipe.id.clone(), dragging_recipe }
             }
         }
     }
@@ -82,7 +79,6 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
     };
 
     let rid = recipe_id.clone();
-    let rid2 = recipe_id.clone();
 
     rsx! {
         div {
@@ -104,20 +100,32 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
                     div { class: "rc-name",
                         "{recipe.name}"
                         if !recipe.exact {
-                            span { class: "rc-approx", title: "Approximate values — verify in-game", "~APX" }
+                            span {
+                                class: "rc-approx",
+                                title: "Approximate values — verify in-game",
+                                "~APX"
+                            }
                         }
                     }
                 }
             }
             div { class: "rc-flow",
                 for io in &recipe.inputs {
-                    Chip { resource_id: io.resource.clone(), qty: io.qty, suffix: None }
+                    Chip {
+                        resource_id: io.resource.clone(),
+                        qty: io.qty,
+                        suffix: None,
+                    }
                 }
                 if !recipe.inputs.is_empty() && !recipe.outputs.is_empty() {
                     span { class: "arrow", "→" }
                 }
                 for io in &recipe.outputs {
-                    Chip { resource_id: io.resource.clone(), qty: io.qty, suffix: None }
+                    Chip {
+                        resource_id: io.resource.clone(),
+                        qty: io.qty,
+                        suffix: None,
+                    }
                 }
             }
         }

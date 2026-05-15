@@ -31,7 +31,6 @@ pub fn Canvas(
     };
 
     let gd = game_data.clone();
-    let gd2 = game_data.clone();
 
     rsx! {
         div { class: "canvas-wrap",
@@ -91,13 +90,15 @@ pub fn Canvas(
                     if let Some(recipe_id) = recipe_id {
                         if gd.recipes_by_id.contains_key(&recipe_id) {
                             let uid = new_uid();
-                            facilities.write().push(Facility {
-                                uid,
-                                recipe_id,
-                                count: 1,
-                                x: None,
-                                y: None,
-                            });
+                            facilities
+                                .write()
+                                .push(Facility {
+                                    uid,
+                                    recipe_id,
+                                    count: 1,
+                                    x: None,
+                                    y: None,
+                                });
                         }
                         dragging_recipe.set(None);
                     }
@@ -107,15 +108,19 @@ pub fn Canvas(
                     div { class: "canvas-empty",
                         div { class: "empty-icon", "⬚" }
                         div { class: "big", "Drop recipes here" }
-                        div { "Drag any recipe from the left." br {} "Set unit counts, watch the balance." }
+                        div {
+                            "Drag any recipe from the left."
+                            br {}
+                            "Set unit counts, watch the balance."
+                        }
                     }
                 } else {
                     match current_view {
                         View::Table => rsx! {
-                            TableView { facilities: facilities }
+                            TableView { facilities }
                         },
                         View::Graph => rsx! {
-                            GraphView { facilities: facilities }
+                            GraphView { facilities }
                         },
                     }
                 }

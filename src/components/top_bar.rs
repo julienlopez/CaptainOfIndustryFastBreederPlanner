@@ -1,4 +1,4 @@
-use crate::state::{example_facilities, BalanceMode, Facility, View};
+use crate::state::{example_facilities, Facility};
 use dioxus::prelude::*;
 
 #[derive(Clone, PartialEq)]
@@ -23,9 +23,7 @@ pub fn TopBar(
                     span { style: "color:var(--text-dim2);font-weight:400;", "· Captain of Industry" }
                 }
             }
-            div { class: "subtitle",
-                "{fac_count} facilities · {total_units} units"
-            }
+            div { class: "subtitle", "{fac_count} facilities · {total_units} units" }
             div { class: "spacer" }
             button {
                 onclick: move |_| {
@@ -71,10 +69,7 @@ pub fn ConfirmDialog(
                 div { class: "confirm-title", "{title}" }
                 div { class: "confirm-msg", "{msg}" }
                 div { class: "confirm-btns",
-                    button {
-                        onclick: move |_| confirm_action.set(None),
-                        "Cancel"
-                    }
+                    button { onclick: move |_| confirm_action.set(None), "Cancel" }
                     button {
                         class: "confirm-yes",
                         onclick: move |_| {
