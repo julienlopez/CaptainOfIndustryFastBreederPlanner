@@ -65,6 +65,7 @@ fn App() -> Element {
                 total_units: total_units,
                 confirm_action: confirm_action,
                 facilities: facilities,
+                view: view,
             }
 
             div { class: "main",
