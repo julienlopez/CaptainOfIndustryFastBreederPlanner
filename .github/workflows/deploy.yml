@@ -39,7 +39,7 @@ jobs:
         run: cargo install dioxus-cli --version 0.7.9 --locked
 
       - name: Build
-        run: dx build --release --no-wasm-opt
+        run: dx build --release
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
