@@ -10,7 +10,7 @@ use components::recipe_palette::RecipePalette;
 use components::top_bar::{ConfirmAction, ConfirmDialog, TopBar};
 use data::GameData;
 use dioxus::prelude::*;
-use state::{example_facilities, BalanceMode, Facility, PersistState, View};
+use state::{example_facilities, Facility, PersistState, View};
 use std::sync::Arc;
 
 const CSS: &str = include_str!("../assets/main.css");
@@ -29,7 +29,6 @@ fn App() -> Element {
     let init = persistence::load_state().unwrap_or_else(|| PersistState {
         facilities: example_facilities(),
         view: View::Table,
-        balance_mode: BalanceMode::All,
     });
 
     // Validate: drop facilities whose recipe_id no longer exists
@@ -41,7 +40,6 @@ fn App() -> Element {
 
     let facilities: Signal<Vec<Facility>> = use_signal(|| valid_facilities);
     let view: Signal<View> = use_signal(|| init.view);
-    let balance_mode: Signal<BalanceMode> = use_signal(|| init.balance_mode);
     let dragging_recipe: Signal<Option<String>> = use_signal(|| None);
     let confirm_action: Signal<Option<ConfirmAction>> = use_signal(|| None);
 
@@ -50,7 +48,6 @@ fn App() -> Element {
         let state = PersistState {
             facilities: facilities.read().clone(),
             view: view.read().clone(),
-            balance_mode: balance_mode.read().clone(),
         };
         persistence::save_state(&state);
     });
@@ -82,7 +79,6 @@ fn App() -> Element {
                 }
                 BalancePanel {
                     facilities: facilities,
-                    balance_mode: balance_mode,
                 }
             }
         }

@@ -7,13 +7,6 @@ pub enum View {
     Graph,
 }
 
-#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, Default)]
-pub enum BalanceMode {
-    #[default]
-    All,
-    External,
-}
-
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
 pub struct Facility {
     pub uid: String,
@@ -29,7 +22,6 @@ pub struct Facility {
 pub struct PersistState {
     pub facilities: Vec<Facility>,
     pub view: View,
-    pub balance_mode: BalanceMode,
 }
 
 pub fn new_uid() -> String {
