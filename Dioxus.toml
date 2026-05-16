@@ -3,7 +3,9 @@
 [web.app]
 
 # HTML title tag content
-title = "dioxus-0-7-9-default"
+title = "FBR Planner"
+
+base_path = "CaptainOfIndustryFastBreederPlanner"
 
 # include `assets` in web platform
 [web.resource]
