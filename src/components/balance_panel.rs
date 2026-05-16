@@ -23,7 +23,9 @@ pub fn BalancePanel(facilities: Signal<Vec<Facility>>) -> Element {
     shown.sort_by(|(_, in_a, out_a), (_, in_b, out_b)| {
         let net_a = (out_a - in_a).abs();
         let net_b = (out_b - in_b).abs();
-        net_b.partial_cmp(&net_a).unwrap_or(std::cmp::Ordering::Equal)
+        net_b
+            .partial_cmp(&net_a)
+            .unwrap_or(std::cmp::Ordering::Equal)
     });
 
     let has_any_active = balance
@@ -71,7 +73,11 @@ fn BalanceRow(resource_id: String, in_amt: f64, out_amt: f64) -> Element {
     };
 
     let net = out_amt - in_amt;
-    let net_class = if net > 0.0 { "bal-net pos" } else { "bal-net neg" };
+    let net_class = if net > 0.0 {
+        "bal-net pos"
+    } else {
+        "bal-net neg"
+    };
     let sign = if net > 0.0 { "+" } else { "" };
     let net_str = fmt_qty(net);
 

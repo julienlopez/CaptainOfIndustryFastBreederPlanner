@@ -1,6 +1,7 @@
 use serde::Deserialize;
 use std::collections::HashMap;
 
+#[allow(unused)]
 #[derive(Deserialize, Clone, Debug)]
 pub struct Resource {
     pub id: String,
@@ -11,6 +12,7 @@ pub struct Resource {
     pub icon: Vec<String>,
 }
 
+#[allow(unused)]
 #[derive(Deserialize, Clone, Debug)]
 pub struct Machine {
     pub name: String,
@@ -43,6 +45,7 @@ pub struct Category {
     pub color: String,
 }
 
+#[allow(unused)]
 pub struct GameData {
     pub resources: Vec<Resource>,
     pub resources_by_id: HashMap<String, Resource>,

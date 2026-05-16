@@ -8,12 +8,6 @@ pub struct NetBalance {
     pub out_per_min: f64,
 }
 
-impl NetBalance {
-    pub fn net(&self) -> f64 {
-        self.out_per_min - self.in_per_min
-    }
-}
-
 pub fn compute_balance(
     facilities: &[Facility],
     recipes_by_id: &HashMap<String, Recipe>,

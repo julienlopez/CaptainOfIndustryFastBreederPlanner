@@ -6,7 +6,7 @@ use std::sync::Arc;
 
 #[component]
 pub fn TableView(facilities: Signal<Vec<Facility>>) -> Element {
-    let game_data = use_context::<Arc<GameData>>();
+    let _game_data = use_context::<Arc<GameData>>();
     let fac_list = facilities.read().clone();
 
     rsx! {
