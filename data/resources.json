@@ -289,5 +289,25 @@
     "icon": [
       "https://wiki.coigame.com/images/8/86/SpentMox.png"
     ]
+  },
+  {
+    "id": "uranium_rod",
+    "name": "Uranium Rod",
+    "short": "URod",
+    "color": "#38bdf8",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/2/20/Uranium_Rod.png"
+    ]
+  },
+  {
+    "id": "mox_rod",
+    "name": "MOX Rod",
+    "short": "MOX",
+    "color": "#f87171",
+    "group": "solid",
+    "icon": [
+      "https://wiki.coigame.com/images/d/da/MoxRod.png"
+    ]
   }
 ]

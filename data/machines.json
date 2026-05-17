@@ -72,6 +72,14 @@
     ]
   },
   {
+    "name": "Nuclear Reactor II",
+    "tier": 2,
+    "category": "nr2",
+    "icon": [
+      "https://wiki.coigame.com/images/a/aa/Nuclear_Reactor_II.png"
+    ]
+  },
+  {
     "name": "Cooling Tower (Large)",
     "tier": 2,
     "category": "aux",

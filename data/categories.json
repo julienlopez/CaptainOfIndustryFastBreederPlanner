@@ -30,6 +30,11 @@
     "color": "#fde047"
   },
   {
+    "id": "nr2",
+    "name": "Nuclear Reactor II",
+    "color": "#fb923c"
+  },
+  {
     "id": "aux",
     "name": "Auxiliary",
     "color": "#06b6d4"

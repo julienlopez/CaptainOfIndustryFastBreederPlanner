@@ -729,6 +729,186 @@
     ]
   },
   {
+    "id": "nr2_mox_2",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 2 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "mox_rod", "qty": 2 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_mox", "qty": 2 }
+    ]
+  },
+  {
+    "id": "nr2_mox_1_384w",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 1 (384 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 384 },
+      { "resource": "mox_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 384 },
+      { "resource": "spent_mox", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_mox_15",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 1.5 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "mox_rod", "qty": 1.5 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_mox", "qty": 1.5 }
+    ]
+  },
+  {
+    "id": "nr2_mox_1_288w",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 1 (288 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 288 },
+      { "resource": "mox_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 288 },
+      { "resource": "spent_mox", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_mox_1",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 1 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "mox_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_mox", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_mox_05",
+    "building": "Nuclear Reactor II",
+    "name": "MOX × 0.5 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "mox_rod", "qty": 0.5 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_mox", "qty": 0.5 }
+    ]
+  },
+  {
+    "id": "nr2_u_2",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 2 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "uranium_rod", "qty": 2 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_fuel", "qty": 2 }
+    ]
+  },
+  {
+    "id": "nr2_u_1_384w",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 1 (384 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 384 },
+      { "resource": "uranium_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 384 },
+      { "resource": "spent_fuel", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_u_15",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 1.5 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "uranium_rod", "qty": 1.5 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_fuel", "qty": 1.5 }
+    ]
+  },
+  {
+    "id": "nr2_u_1_288w",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 1 (288 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 288 },
+      { "resource": "uranium_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 288 },
+      { "resource": "spent_fuel", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_u_1",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 1 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "uranium_rod", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_fuel", "qty": 1 }
+    ]
+  },
+  {
+    "id": "nr2_u_05",
+    "building": "Nuclear Reactor II",
+    "name": "Uranium × 0.5 (192 water)",
+    "category": "nr2",
+    "duration": 60,
+    "inputs": [
+      { "resource": "water", "qty": 192 },
+      { "resource": "uranium_rod", "qty": 0.5 }
+    ],
+    "outputs": [
+      { "resource": "steam_hp", "qty": 192 },
+      { "resource": "spent_fuel", "qty": 0.5 }
+    ]
+  },
+  {
     "id": "cool_dp",
     "building": "Cooling Tower (Large)",
     "name": "Steam (Depleted) → Water",
