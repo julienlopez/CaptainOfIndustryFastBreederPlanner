@@ -149,6 +149,15 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-dim);
+  cursor: pointer;
+  user-select: none;
+}
+.cat-header:hover {
+  color: var(--text);
+}
+.cat-chevron {
+  margin-left: auto;
+  font-size: 12px;
 }
 
 .cat-dot {

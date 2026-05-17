@@ -46,14 +46,24 @@ fn CategoryGroup(
         return rsx! {};
     }
 
+    let mut expanded = use_signal(|| true);
+
     rsx! {
         div { class: "cat-group",
-            div { class: "cat-header",
+            div {
+                class: "cat-header",
+                onclick: move |_| {
+                    let val = *expanded.read();
+                    expanded.set(!val);
+                },
                 span { class: "cat-dot", style: "background:{cat.color};" }
                 "{cat.name}"
+                span { class: "cat-chevron", if *expanded.read() { "▾" } else { "▸" } }
             }
-            for recipe in recipes {
-                RecipeCard { recipe_id: recipe.id.clone(), facilities, dragging_recipe }
+            if *expanded.read() {
+                for recipe in recipes {
+                    RecipeCard { recipe_id: recipe.id.clone(), facilities, dragging_recipe }
+                }
             }
         }
     }
