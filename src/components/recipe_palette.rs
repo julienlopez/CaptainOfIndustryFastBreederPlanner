@@ -1,6 +1,6 @@
 use super::icons::{Chip, MachineIcon};
 use crate::data::GameData;
-use crate::state::Facility;
+use crate::state::{new_uid, Facility};
 use dioxus::prelude::*;
 use std::sync::Arc;
 
@@ -14,7 +14,7 @@ pub fn RecipePalette(
 
     rsx! {
         div { class: "panel",
-            div { class: "panel-title", "Recipes — drag to canvas" }
+            div { class: "panel-title", "Recipes — drag or double-click" }
             for cat in categories {
                 CategoryGroup {
                     category_id: cat.id.clone(),
@@ -53,14 +53,18 @@ fn CategoryGroup(
                 "{cat.name}"
             }
             for recipe in recipes {
-                RecipeCard { recipe_id: recipe.id.clone(), dragging_recipe }
+                RecipeCard { recipe_id: recipe.id.clone(), facilities, dragging_recipe }
             }
         }
     }
 }
 
 #[component]
-fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Element {
+fn RecipeCard(
+    recipe_id: String,
+    facilities: Signal<Vec<Facility>>,
+    dragging_recipe: Signal<Option<String>>,
+) -> Element {
     let game_data = use_context::<Arc<GameData>>();
     let Some(recipe) = game_data.recipes_by_id.get(&recipe_id).cloned() else {
         return rsx! {};
@@ -79,6 +83,7 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
     };
 
     let rid = recipe_id.clone();
+    let rid2 = recipe_id.clone();
 
     rsx! {
         div {
@@ -91,6 +96,15 @@ fn RecipeCard(recipe_id: String, dragging_recipe: Signal<Option<String>>) -> Ele
             },
             ondragend: move |_| {
                 dragging_recipe.set(None);
+            },
+            ondblclick: move |_| {
+                facilities.write().push(Facility {
+                    uid: new_uid(),
+                    recipe_id: rid2.clone(),
+                    count: 1,
+                    x: None,
+                    y: None,
+                });
             },
 
             div { class: "rc-top",
