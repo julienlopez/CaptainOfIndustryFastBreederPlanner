@@ -30,6 +30,11 @@
     "color": "#fde047"
   },
   {
+    "id": "assembly",
+    "name": "Assembly",
+    "color": "#64748b"
+  },
+  {
     "id": "nr2",
     "name": "Nuclear Reactor II",
     "color": "#fb923c"

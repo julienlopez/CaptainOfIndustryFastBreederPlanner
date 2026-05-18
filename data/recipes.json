@@ -756,6 +756,48 @@
     ]
   },
   {
+    "id": "asm3_uranium_rod",
+    "building": "Assembly III",
+    "name": "Uranium Rod (Assembly III)",
+    "category": "assembly",
+    "duration": 60,
+    "inputs": [
+      { "resource": "u_4", "qty": 2 },
+      { "resource": "steel", "qty": 1 }
+    ],
+    "outputs": [
+      { "resource": "uranium_rod", "qty": 2 }
+    ]
+  },
+  {
+    "id": "asm4_uranium_rod",
+    "building": "Assembly IV",
+    "name": "Uranium Rod (Assembly IV)",
+    "category": "assembly",
+    "duration": 60,
+    "inputs": [
+      { "resource": "u_4", "qty": 4 },
+      { "resource": "steel", "qty": 2 }
+    ],
+    "outputs": [
+      { "resource": "uranium_rod", "qty": 4 }
+    ]
+  },
+  {
+    "id": "asm5_uranium_rod",
+    "building": "Assembly V",
+    "name": "Uranium Rod (Assembly V)",
+    "category": "assembly",
+    "duration": 60,
+    "inputs": [
+      { "resource": "u_4", "qty": 8 },
+      { "resource": "steel", "qty": 4 }
+    ],
+    "outputs": [
+      { "resource": "uranium_rod", "qty": 8 }
+    ]
+  },
+  {
     "id": "nr2_mox_2",
     "building": "Nuclear Reactor II",
     "name": "MOX × 2",

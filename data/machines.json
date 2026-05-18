@@ -72,6 +72,30 @@
     ]
   },
   {
+    "name": "Assembly III",
+    "tier": 3,
+    "category": "assembly",
+    "icon": [
+      "https://wiki.coigame.com/images/c/ce/AssemblyElectrifiedT2.png"
+    ]
+  },
+  {
+    "name": "Assembly IV",
+    "tier": 4,
+    "category": "assembly",
+    "icon": [
+      "https://wiki.coigame.com/images/5/56/AssemblyRoboticT1.png"
+    ]
+  },
+  {
+    "name": "Assembly V",
+    "tier": 5,
+    "category": "assembly",
+    "icon": [
+      "https://wiki.coigame.com/images/5/50/AssemblyRoboticT2.png"
+    ]
+  },
+  {
     "name": "Nuclear Reactor II",
     "tier": 2,
     "category": "nr2",
