@@ -18,9 +18,26 @@ pub struct Facility {
     pub y: Option<f32>,
 }
 
+#[derive(Serialize, Deserialize, Clone, Debug)]
+pub struct TabData {
+    pub name: String,
+    #[serde(default)]
+    pub facilities: Vec<Facility>,
+    #[serde(default)]
+    pub view: View,
+}
+
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
 pub struct PersistState {
+    // New multi-tab format
+    #[serde(default)]
+    pub tabs: Vec<TabData>,
+    #[serde(default)]
+    pub active_tab: usize,
+    // Legacy single-tab fields — read from old saves, never written to new ones
+    #[serde(default, skip_serializing)]
     pub facilities: Vec<Facility>,
+    #[serde(default, skip_serializing)]
     pub view: View,
 }
 

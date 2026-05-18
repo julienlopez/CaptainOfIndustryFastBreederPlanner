@@ -108,7 +108,93 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: 320px 1fr 380px;
+  grid-template-columns: 320px 1fr;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ─── Tab workspace (right of recipe palette) ─────────────────────────── */
+.tab-workspace {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.tab-bar {
+  display: flex;
+  align-items: stretch;
+  height: 36px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  user-select: none;
+  min-width: 80px;
+}
+
+.tab-item:hover {
+  background: var(--bg-3);
+  color: var(--text);
+}
+
+.tab-item.active {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 2px solid var(--accent);
+}
+
+.tab-name {
+  flex: 1;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: var(--text-dim2);
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tab-close:hover {
+  color: var(--bad);
+}
+
+.tab-add {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 0 14px;
+  font-size: 20px;
+  line-height: 36px;
+  flex-shrink: 0;
+}
+
+.tab-add:hover {
+  color: var(--accent);
+  background: var(--bg-3);
+}
+
+.tab-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  flex: 1;
   min-height: 0;
   overflow: hidden;
 }
